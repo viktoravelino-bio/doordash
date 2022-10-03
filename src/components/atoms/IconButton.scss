@@ -1,0 +1,17 @@
+.icon-button {
+  &:where(&) {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: none;
+    padding: 4px;
+    // background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
