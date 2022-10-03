@@ -11,3 +11,6 @@ export { ReactComponent as CartIcon } from './cart.svg';
 export { ReactComponent as CloseIcon } from './close.svg';
 export { ReactComponent as SearchIcon } from './search.svg';
 export { ReactComponent as ArrowLeftIcon } from './arrow-left.svg';
+export { ReactComponent as FacebookIcon } from './facebook.svg';
+export { ReactComponent as GoogleIcon } from './google.svg';
+export { ReactComponent as TwitterIcon } from './twitter.svg';

@@ -1,0 +1,67 @@
+.form-control__container {
+  & .form-control__label__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-right: 8px;
+
+    & .form-control__label {
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+    }
+    & .form-control__aux-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: #717171;
+    }
+  }
+
+  & .form-control__input__container {
+    border: 2px solid transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0 8px;
+    padding-left: 12px;
+    background-color: rgb(247, 247, 247);
+
+    &.error {
+      border: 2px solid #ff0000;
+    }
+
+    &:focus-within {
+      border-color: black;
+    }
+
+    & > input {
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 8px 0;
+    }
+
+    & > button {
+      font-weight: bold;
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .form-control__error-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff0000;
+    margin-top: 8px;
+    padding-left: 4px;
+  }
+}

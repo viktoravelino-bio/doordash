@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { CloseOutlinedIcon } from '../../../assets/icons';
-import { IconButton } from '../../atoms/IconButton';
+import { IconButton } from '../../atoms/iconButton/IconButton';
 import './Modal.scss';
 
 export const Modal = ({ children, visible, onClose, title }) => {
