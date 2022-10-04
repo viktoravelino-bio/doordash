@@ -10,7 +10,7 @@ export const ShoppingCartButton = forwardRef(
         {...rest}
         ref={ref}
       >
-        <ShoppingCartIcon width={20} height={20} fill="currentColor" />
+        <ShoppingCartIcon width={21} height={21} fill="currentColor" />
         <span className="shopping-cart-button__text">{totalQtyOfProducts}</span>
       </button>
     );
