@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import { SearchInput } from '../components/molecules/searchInput/SearchInput';
-import { ShoppingCartButton } from '../components/atoms/shoppingCartButton/ShoppingCartButton';
+import { AddressSelection } from '../components/atoms/addressSelection/AddressSelection';
+import { Header } from '../components/organisms/header/Header';
 
 export const ShowHeader = () => {
-  const [value, setValue] = useState('');
   return (
-    <div>
-      {/* <ShoppingCartButton /> */}
-      <SearchInput value={value} onChange={setValue} searchValues={[{}]} />
-    </div>
+    <>
+      <Header />
+      <AddressSelection />
+    </>
   );
 };

@@ -1,10 +1,15 @@
-import { lazy } from 'react';
-import { ArrowLeftIcon, CloseIcon, SearchIcon } from '../../../assets/icons';
+import {
+  ArrowLeftIcon,
+  CloseIcon,
+  MenuIcon,
+  SearchIcon,
+} from '../../../assets/icons';
 
 const map = {
   'arrow-left': ArrowLeftIcon,
   search: SearchIcon,
   close: CloseIcon,
+  menu: MenuIcon,
 };
 
 export const Icon = ({

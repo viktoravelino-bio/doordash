@@ -1,14 +1,17 @@
+import { Icon } from '../icon/Icon';
 import './IconButton.scss';
 
 export const IconButton = ({
-  icon: Icon,
-  size = 24,
+  icon,
+  width,
+  height,
+  size,
   className = '',
   ...rest
 }) => {
   return (
     <button className={`icon-button ${className}`} {...rest}>
-      <Icon width={size} height={size} fill="currentColor" />
+      <Icon icon={icon} width={width} height={height} size={size} />
     </button>
   );
 };

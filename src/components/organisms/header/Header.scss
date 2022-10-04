@@ -1,0 +1,30 @@
+.header__container {
+  display: flex;
+  column-gap: 8px;
+  height: 64px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .menu-button {
+    background-color: transparent;
+    margin-left: 10px;
+  }
+
+  .search-input__container {
+    flex: 1;
+  }
+  .shopping-cart {
+    margin-right: 10px;
+  }
+
+  .address-selection {
+    display: none;
+    flex: 0;
+    margin-left: 5px;
+    border: none;
+    > button {
+      white-space: nowrap;
+      font-size: 14px;
+    }
+  }
+}
