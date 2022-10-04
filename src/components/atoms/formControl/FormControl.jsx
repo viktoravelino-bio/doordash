@@ -2,7 +2,10 @@ import { forwardRef, useRef, useState } from 'react';
 import './FormControl.scss';
 
 export const FormControl = forwardRef(
-  ({ type, value, onChange, label, error, auxText, ...rest }, ref) => {
+  (
+    { type, value, onChange, label, error, auxText, className, ...rest },
+    ref
+  ) => {
     const [showPassword, setShowPassword] = useState(type !== 'password');
 
     const togglePassword = () => {
@@ -10,7 +13,7 @@ export const FormControl = forwardRef(
     };
 
     return (
-      <div className="form-control__container">
+      <div className={`form-control__container ${className}`}>
         <div className="form-control__label__container">
           {label && <label className="form-control__label">{label}</label>}
           {auxText && <span className="form-control__aux-text">{auxText}</span>}

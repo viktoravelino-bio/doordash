@@ -1,9 +1,10 @@
 .modal-signIn__container {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 
   & .modal-signIn__social {
-    margin: 20px 0;
+    margin-top: 20px;
   }
 
   & .modal-signIn__divider {
@@ -57,9 +58,9 @@
     }
   }
 
-  & .modal-signIn__form {
+  & .modal-signIn__form,
+  & .modal-signUp__form {
     padding: 16px;
-
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -67,9 +68,45 @@
     & > button[type='submit'] {
       margin-top: 20px;
       background-color: red;
+      font-weight: bold;
 
       &:hover {
         background-color: #d30000;
+      }
+    }
+  }
+
+  & .modal-signIn__form {
+    & > .forgot-password-link {
+      font-size: 13px;
+      color: rgb(93, 93, 93);
+      text-decoration: none;
+      transition: filter 0.15s ease-in-out;
+      margin-top: -10px;
+    }
+  }
+
+  &.signUp {
+    & .modal-signIn__selector {
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+    & .modal-signUp__divider {
+      margin: 0 25px;
+    }
+
+    & .modal-signUp__form {
+      & .modal-signUp__form__row {
+        display: flex;
+        gap: 10px;
+
+        & > .form-control__container {
+          flex: 1;
+
+          &.prefix-number {
+            flex: 0.3;
+          }
+        }
       }
     }
   }
