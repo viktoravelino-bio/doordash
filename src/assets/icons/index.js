@@ -14,3 +14,4 @@ export { ReactComponent as ArrowLeftIcon } from './arrow-left.svg';
 export { ReactComponent as FacebookIcon } from './facebook.svg';
 export { ReactComponent as GoogleIcon } from './google.svg';
 export { ReactComponent as TwitterIcon } from './twitter.svg';
+export { ReactComponent as ShoppingCartIcon } from './cart.svg';

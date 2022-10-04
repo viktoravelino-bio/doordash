@@ -1,0 +1,24 @@
+.shopping-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+
+  gap: 10px;
+
+  background-color: red;
+  color: white;
+  border-radius: 1000px;
+  padding: 8px 16px;
+  border: none;
+
+  & > span {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: #dd0000;
+    cursor: pointer;
+  }
+}

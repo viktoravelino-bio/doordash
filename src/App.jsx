@@ -1,10 +1,13 @@
 import './App.css';
+import { ShowHeader } from './pages/ShowHeader';
 import { ShowSignInModal } from './pages/ShowSignInModal';
 
 function App() {
   return (
     <div className="App">
-      <ShowSignInModal />
+      {/* <ShowSignInModal /> */}
+
+      <ShowHeader />
     </div>
   );
 }
