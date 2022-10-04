@@ -1,0 +1,74 @@
+@import '../../../styles/mixins.scss';
+
+$HEADER-HEIGHT: 64px;
+
+.search-input__container {
+  height: $HEADER-HEIGHT;
+  position: relative;
+  display: flex;
+
+  & .search-input__input {
+    border: 2px solid transparent;
+    width: 94%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(96, 96, 96);
+    padding: 0 10px;
+    border-radius: 1000px;
+    position: relative;
+    z-index: 1;
+
+    &.focused {
+      border-color: black;
+    }
+
+    & > input {
+      flex: 1;
+      min-width: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      font-size: 15px;
+    }
+
+    & > svg {
+      color: rgb(25, 25, 25);
+      flex-shrink: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .search-input__results-sheet {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 0;
+    border-radius: 8px;
+    padding-top: $HEADER-HEIGHT;
+
+    animation-duration: 0.15s;
+    display: none;
+    border: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+
+    & .search-input__results-sheet__list {
+      overflow-y: auto;
+      max-height: 400px;
+      padding-bottom: 10px;
+
+      @include removeScrollbar;
+    }
+
+    &.show {
+      animation-name: fadeIn;
+    }
+  }
+}
