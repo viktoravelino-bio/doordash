@@ -1,0 +1,27 @@
+.filter-item__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 1000px;
+  height: 37px;
+  padding: 0 10px;
+  white-space: nowrap;
+  font-weight: bold;
+  flex-shrink: 0;
+
+  transition: background-color 0.15s, width 0.2s ease 300ms,
+    padding 0.2s ease 300ms, opacity 0.2s ease 300ms;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .divider {
+    height: 50%;
+    width: 1px;
+    background-color: rgb(201, 201, 201);
+  }
+}

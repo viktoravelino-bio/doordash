@@ -1,0 +1,27 @@
+.filter__container {
+  // border: 1px solid black;
+  position: sticky;
+  top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 65px;
+  background-color: #f5f5f5;
+
+  gap: 10px;
+  overflow-y: auto;
+
+  .cuisines {
+    overflow: hidden;
+    width: 0;
+    padding: 0 0;
+    opacity: 0;
+
+    &.show {
+      width: 113px;
+      display: flex;
+      padding: 0 10px;
+      opacity: 1;
+    }
+  }
+}

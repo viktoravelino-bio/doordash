@@ -1,5 +1,7 @@
 .header__container {
   position: sticky;
+  top: 0;
+  background-color: white;
   display: flex;
   column-gap: 8px;
   height: 64px;

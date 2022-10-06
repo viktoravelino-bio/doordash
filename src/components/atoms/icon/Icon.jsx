@@ -1,6 +1,7 @@
 import {
   ArrowLeftIcon,
   BagIcon,
+  ChevronDownIcon,
   CloseIcon,
   CloseOutlinedIcon,
   HelpIcon,
@@ -22,6 +23,7 @@ const map = {
   tag: TagIcon,
   help: HelpIcon,
   user: UserIcon,
+  'chevron-down': ChevronDownIcon,
 };
 
 export const Icon = ({
