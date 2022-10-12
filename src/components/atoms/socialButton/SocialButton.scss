@@ -1,21 +1,20 @@
 .social-button {
-  max-width: 300px;
-  width: 100%;
-  padding: 6px 0;
-  border-radius: 1000px;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all 0.1s ease-in-out;
+  max-width: 300px;
+  width: 100%;
+  padding: 0.25rem 0;
+  border-radius: 1000px;
+  border: none;
+  transition: filter 0.1s ease-in-out;
 
   & > span {
     font-weight: bold;
   }
 
   &:hover {
-    cursor: pointer;
     filter: brightness(0.9);
   }
 

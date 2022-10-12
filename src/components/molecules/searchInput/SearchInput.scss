@@ -1,4 +1,4 @@
-@import '../../../styles/mixins.scss';
+@import '../../../scss/main.scss';
 
 $HEADER-HEIGHT: 64px;
 
@@ -64,7 +64,7 @@ $HEADER-HEIGHT: 64px;
       max-height: 400px;
       padding-bottom: 10px;
 
-      @include removeScrollbar;
+      @include remove-scrollbar;
     }
 
     &.show {

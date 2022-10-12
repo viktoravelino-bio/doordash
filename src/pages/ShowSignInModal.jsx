@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { SocialSignInModal } from '../components/organisms/socialSignInModal/SocialSignInModal';
+import { AuthModal } from '../components/organisms/authModal/AuthModal';
+// import { SocialSignInModal } from '../components/organisms/socialSignInModal/SocialSignInModal';
 
 const providersObj = {
   google: {
@@ -29,10 +30,24 @@ export const ShowSignInModal = () => {
     >
       <button onClick={() => setShow(true)}>Open SignIn Modal</button>
 
-      <SocialSignInModal
-        visible={show}
+      <AuthModal
+        isOpen={show}
         onClose={() => setShow(false)}
-        providers={providersObj}
+        signIngHandler={(data) => console.log('onSignIn Triggered: ', data)}
+        signUpHandler={(data) => console.log('onSignUp Triggered: ', data)}
+        forgotPasswordHandler={(data) =>
+          console.log('forgotPassword Triggered: ', data)
+        }
+        providers={{
+          google: {
+            label: 'Continue with Google',
+            handler: () => console.log('signIn Google'),
+          },
+          facebook: {
+            label: 'Continue with Facebook',
+            handler: () => console.log('signIn Facebook'),
+          },
+        }}
       />
     </div>
   );

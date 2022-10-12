@@ -10,11 +10,11 @@ function App() {
 
       <ShowHeader />
 
-      <div style={{ height: '200px', backgroundColor: '#e0e0e0' }}></div>
+      {/* <div style={{ height: '200px', backgroundColor: '#e0e0e0' }}></div> */}
 
-      <Filter />
+      {/* <Filter /> */}
 
-      <div style={{ height: '2000px', backgroundColor: '#e0e0e0' }}></div>
+      {/* <div style={{ height: '2000px', backgroundColor: '#e0e0e0' }}></div> */}
     </div>
   );
 }
