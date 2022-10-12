@@ -55,9 +55,12 @@ $HEADER-HEIGHT: 64px;
     padding-top: $HEADER-HEIGHT;
 
     animation-duration: 0.15s;
-    display: none;
+    display: block;
     border: 1px solid rgb(214, 214, 214);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
 
     & .search-input__results-sheet__list {
       overflow-y: auto;
@@ -68,7 +71,8 @@ $HEADER-HEIGHT: 64px;
     }
 
     &.show {
-      animation-name: fadeIn;
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }

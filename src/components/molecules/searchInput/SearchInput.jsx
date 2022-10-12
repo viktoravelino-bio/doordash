@@ -1,36 +1,32 @@
 import './SearchInput.scss';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useState } from 'react';
+import { classNames } from '../../../lib/classNames';
+
 import { Icon } from '../../atoms/icon/Icon';
-import { SearchResultItem } from './atoms/searchResultItem/SearchResultItem';
 
 export const SearchInput = ({
   onChange,
   value,
   onFocus = () => {},
   onBlur = () => {},
-  searchValues,
+  searchResultValues,
+  renderItem,
+  keyExtractor,
 }) => {
   const [inputFocused, setInputFocused] = useState(false);
-  const sheetRef = useRef(null);
 
-  const showSheet = inputFocused && value && searchValues;
+  const showSheet =
+    inputFocused && Boolean(value) && Boolean(searchResultValues);
 
   function handleChange(e) {
     onChange(e.target.value);
   }
 
-  useEffect(() => {
-    if (!showSheet) {
-      sheetRef.current.classList.remove('animate__fadeIn');
-      sheetRef.current.classList.add('animate__fadeOut');
-    } else {
-      sheetRef.current.style.display = 'block';
-    }
-  }, [showSheet]);
-
   return (
     <div className="search-input__container">
-      <div className={`search-input__input ${inputFocused && 'focused'}`}>
+      <div
+        className={classNames('search-input__input', { focused: inputFocused })}
+      >
         <Icon icon={inputFocused ? 'arrow-left' : 'search'} size={20} />
         <input
           type="text"
@@ -50,28 +46,18 @@ export const SearchInput = ({
       </div>
 
       <div
-        className={`search-input__results-sheet animate__animated ${
-          showSheet ? 'show' : ''
-        }`}
-        ref={sheetRef}
-        onAnimationEnd={() => {
-          if (!showSheet) {
-            sheetRef.current.style.display = 'none';
-          }
-        }}
+        className={classNames('search-input__results-sheet', {
+          show: showSheet,
+        })}
       >
         <div className="search-input__results-sheet__list">
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
-          <SearchResultItem />
+          {Boolean(renderItem) &&
+            Boolean(searchResultValues) &&
+            searchResultValues.map((item) => (
+              <Fragment key={keyExtractor(item) || item.id}>
+                {renderItem(item)}
+              </Fragment>
+            ))}
         </div>
       </div>
     </div>
