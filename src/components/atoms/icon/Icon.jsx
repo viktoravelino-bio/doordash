@@ -1,47 +1,27 @@
-import {
-  ArrowLeftIcon,
-  BagIcon,
-  ChevronDownIcon,
-  CloseIcon,
-  CloseOutlinedIcon,
-  HelpIcon,
-  HomeIcon,
-  MenuIcon,
-  SearchIcon,
-  TagIcon,
-  UserIcon,
-} from '../../../assets/icons';
+import { forwardRef, memo } from 'react';
+import { getComponentSize } from '../../../lib/getComponentSize';
 
-const map = {
-  'arrow-left': ArrowLeftIcon,
-  search: SearchIcon,
-  close: CloseIcon,
-  'close-outlined': CloseOutlinedIcon,
-  menu: MenuIcon,
-  home: HomeIcon,
-  bag: BagIcon,
-  tag: TagIcon,
-  help: HelpIcon,
-  user: UserIcon,
-  'chevron-down': ChevronDownIcon,
-};
+function IconComponent(
+  {
+    icon: Component,
+    width,
+    height,
+    size = 24,
+    fill = 'currentColor',
+    ...props
+  },
+  ref
+) {
+  if (!Boolean(Component) || typeof Component !== 'object') return null;
 
-export const Icon = ({
-  icon = 'arrow-left',
-  width,
-  height,
-  size = 24,
-  ...rest
-}) => {
-  const Component = map[icon];
+  return (
+    <Component
+      {...props}
+      {...getComponentSize({ height, size, width })}
+      fill={fill}
+      ref={ref}
+    />
+  );
+}
 
-  function getSize() {
-    if (width || height) {
-      return { width, height };
-    }
-
-    return { width: size, height: size };
-  }
-
-  return <Component {...getSize()} fill="currentColor" {...rest} />;
-};
+export const Icon = memo(forwardRef(IconComponent));
