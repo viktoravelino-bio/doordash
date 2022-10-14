@@ -1,5 +1,20 @@
+import { forwardRef, memo } from 'react';
+import { classNames } from '../../../lib/classNames';
+import { getComponentSize } from '../../../lib/getComponentSize';
 import './Avatar.scss';
 
-export const Avatar = ({ url }) => {
-  return <img className="avatar" src={url} alt="" />;
-};
+function AvatarComponent(
+  { className, size = 40, height, width, ...props },
+  ref
+) {
+  return (
+    <img
+      {...props}
+      className={classNames('avatar', className)}
+      {...getComponentSize({ height, size, width })}
+      ref={ref}
+    />
+  );
+}
+
+export const Avatar = memo(forwardRef(AvatarComponent));
