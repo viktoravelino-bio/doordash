@@ -1,17 +1,22 @@
+import { forwardRef, memo } from 'react';
+import { classNames } from '../../../lib/classNames';
+import { getComponentSize } from '../../../lib/getComponentSize';
 import { Icon } from '../icon/Icon';
 import './IconButton.scss';
 
-export const IconButton = ({
-  icon,
-  width,
-  height,
-  size,
-  className = '',
-  ...rest
-}) => {
+function IconButtonComponent(
+  { icon, width, height, size = 24, className, ...props },
+  ref
+) {
   return (
-    <button className={`icon-button ${className}`} {...rest}>
-      <Icon icon={icon} width={width} height={height} size={size} />
+    <button
+      {...props}
+      className={classNames('icon-button', className)}
+      ref={ref}
+    >
+      <Icon icon={icon} {...getComponentSize({ height, size, width })} />
     </button>
   );
-};
+}
+
+export const IconButton = memo(forwardRef(IconButtonComponent));

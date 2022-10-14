@@ -1,14 +1,13 @@
 .icon-button {
-  &:where(&) {
-    height: fit-content;
-    width: fit-content;
+  :where(&) {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
     border: none;
-    padding: 4px;
-    // background-color: transparent;
+    padding: 0.125rem;
+    background-color: transparent;
+    color: inherit;
 
     &:hover {
       cursor: pointer;
