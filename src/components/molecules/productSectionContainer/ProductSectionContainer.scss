@@ -1,0 +1,27 @@
+@import '../../../scss/main.scss';
+
+.product-section__container {
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: white;
+
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #e7e7e7;
+
+  @include remove-scrollbar;
+
+  > div {
+    display: flex;
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+}
+
+@include respond-to('x-small') {
+  .product-section__container {
+    background-color: rgb(247, 247, 247);
+    border: none;
+  }
+}
