@@ -1,17 +1,18 @@
-import { useEffect, useRef } from 'react';
-import { Icon } from '../../atoms/icon/Icon';
+import { useRef } from 'react';
+import { classNames } from '../../../lib/classNames';
+import { CloseOutlinedIcon } from '../../../assets/icons';
+import { IconButton } from '../../atoms/iconButton/IconButton';
 import './Sidebar.scss';
 
-export const Sidebar = ({ visible, onClose, children, fromRight }) => {
+export function Sidebar({
+  visible,
+  onClose,
+  children,
+  fromRight,
+  className,
+  ...props
+}) {
   const headerRef = useRef(null);
-  const containerRef = useRef(null);
-
-  const inAnimation = fromRight
-    ? 'animate__slideInRight'
-    : 'animate__slideInLeft';
-  const outAnimation = fromRight
-    ? 'animate__slideOutRight'
-    : 'animate__slideOutLeft';
 
   const handleShowHeaderShadowOnScroll = (e) => {
     if (e.target.scrollTop > 0) {
@@ -21,35 +22,22 @@ export const Sidebar = ({ visible, onClose, children, fromRight }) => {
     }
   };
 
-  const handleToggleShowSidebar = () => {
-    if (visible) {
-      containerRef.current.style.visibility = 'visible';
-      containerRef.current.classList.remove(outAnimation);
-      containerRef.current.classList.add(inAnimation);
-    } else {
-      containerRef.current.classList.remove(inAnimation);
-      containerRef.current.classList.add(outAnimation);
-    }
-  };
-
-  useEffect(() => {
-    handleToggleShowSidebar();
-  }, [visible]);
-
   return (
     <aside
-      ref={containerRef}
-      className={`sidebar__container animate__animated`}
-      onScroll={handleShowHeaderShadowOnScroll}
+      {...props}
+      className={classNames('sidebar__container', className, {
+        right: fromRight,
+        show: visible,
+      })}
+      onScroll={(e) => {
+        handleShowHeaderShadowOnScroll(e);
+        props.onScroll(e);
+      }}
     >
       <div className="sidebar__header" ref={headerRef}>
-        <Icon
-          icon="close-outlined"
-          className="sidebar__close-button"
-          onClick={onClose}
-        />
+        <IconButton icon={CloseOutlinedIcon} onClick={onClose} />
       </div>
       {children}
     </aside>
   );
-};
+}

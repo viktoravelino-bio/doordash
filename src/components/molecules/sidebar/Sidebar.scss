@@ -1,15 +1,30 @@
+@import '../../../scss/main.scss';
+
 .sidebar__container {
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   background-color: white;
   overflow-y: auto;
-  visibility: hidden;
 
-  animation-duration: 0.2s;
+  transition: translate 0.3s, box-shadow 0.3s;
+
+  &:not(.right) {
+    translate: -100% 0;
+  }
+
+  &.right {
+    left: auto;
+    right: 0;
+    translate: 100% 0;
+  }
+
+  &.show {
+    translate: 0 0;
+  }
 
   .sidebar__header {
     position: sticky;
@@ -18,11 +33,16 @@
     padding: 16px;
 
     &.shadow {
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
+      box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
     }
+  }
+}
 
-    > .sidebar__close-button:hover {
-      cursor: pointer;
+@include respond-to('small') {
+  .sidebar__container {
+    width: 22rem;
+    &.show {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
     }
   }
 }
