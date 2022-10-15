@@ -1,0 +1,30 @@
+@import '../../../scss/main.scss';
+
+.cuisine-selection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: black;
+  &.selected {
+    color: red;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@include respond-to('small') {
+  .cuisine-selection-item {
+    // font-size: 0.875rem;
+    font-weight: 500;
+  }
+}

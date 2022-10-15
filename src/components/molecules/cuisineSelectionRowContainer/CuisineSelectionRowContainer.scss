@@ -1,0 +1,18 @@
+@import '../../../scss/main.scss';
+
+.cuisines-selection-row__container {
+  display: flex;
+  background-color: white;
+  padding: 0 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+
+  @include remove-scrollbar;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
