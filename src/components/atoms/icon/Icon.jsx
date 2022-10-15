@@ -20,6 +20,7 @@ function IconComponent(
       {...getComponentSize({ height, size, width })}
       fill={fill}
       ref={ref}
+      style={{ flexShrink: 0 }}
     />
   );
 }
