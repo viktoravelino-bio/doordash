@@ -11,7 +11,7 @@ export function ProductSectionContainer({ className, ...props }) {
     >
       <div>
         {productSectionData.productSection.map((section) => (
-          <ProductSectionItem item={section} />
+          <ProductSectionItem key={section.label} item={section} />
         ))}
       </div>
     </div>
