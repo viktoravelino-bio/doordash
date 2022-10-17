@@ -1,27 +1,48 @@
-.filter__container {
-  // border: 1px solid black;
-  position: sticky;
-  top: 64px;
+@import '../../../scss/main.scss';
+
+.filter-items-row__container {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 65px;
-  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  gap: 0.75rem;
+  background-color: white;
+  position: sticky;
 
-  gap: 10px;
+  // top: 4rem;
+  border-bottom: 1px solid transparent;
   overflow-y: auto;
+  overflow-x: visible;
 
-  .cuisines {
-    overflow: hidden;
+  @include remove-scrollbar;
+
+  transition: border-bottom-color 0.4s;
+
+  &.sticky {
+    border-bottom-color: #e7e7e7;
+  }
+
+  > :first-child {
+    transition: opacity 0.3s, width 0.3s, padding 0.3s;
+    flex-shrink: 0;
+    justify-content: flex-start;
     width: 0;
-    padding: 0 0;
+    padding: 0;
     opacity: 0;
+  }
 
-    &.show {
-      width: 113px;
-      display: flex;
-      padding: 0 10px;
+  > :nth-child(2) {
+    transition: margin-left 0.3s;
+    margin-left: -0.75rem;
+  }
+
+  &.show {
+    > :first-child {
+      width: 7rem;
+      padding: 0 1rem;
       opacity: 1;
+    }
+
+    > :nth-child(2) {
+      margin-left: 0;
     }
   }
 }

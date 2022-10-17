@@ -1,0 +1,7 @@
+.cuisines-modal__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
