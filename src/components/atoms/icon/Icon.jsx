@@ -7,6 +7,7 @@ function IconComponent(
     width,
     height,
     size = 24,
+    style,
     fill = 'currentColor',
     ...props
   },
@@ -20,7 +21,7 @@ function IconComponent(
       {...getComponentSize({ height, size, width })}
       fill={fill}
       ref={ref}
-      style={{ flexShrink: 0 }}
+      style={{ flexShrink: 0, ...style }}
     />
   );
 }
