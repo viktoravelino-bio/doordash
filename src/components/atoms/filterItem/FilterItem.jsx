@@ -1,26 +1,26 @@
-import { forwardRef } from 'react';
+import { ChevronDownIcon } from '../../../assets/icons';
+import { classNames } from '../../../lib/classNames';
+import { Button } from '../button/Button';
 import { Icon } from '../icon/Icon';
 import './FilterItem.scss';
 
-export const FilterItem = forwardRef(
-  (
-    {
-      children,
-      leftIcon,
-      leftDivider,
-      rightIcon,
-      rightDivider,
-      className = '',
-    },
-    ref
-  ) => {
-    return (
-      <div className={`filter-item__container ${className}`} ref={ref}>
-        {/* {leftIcon && <Icon icon={leftIcon} size={13} />} */}
-        <span>{children}</span>
-        {rightDivider && <div className="divider" />}
-        {rightIcon && <Icon icon={rightIcon} size={13} />}
-      </div>
-    );
-  }
-);
+function FilterItemDivider() {
+  return <div className="button-divider"></div>;
+}
+
+function FilterItemButton({ label, className, children, ...props }) {
+  return (
+    <Button
+      {...props}
+      className={classNames('muted filter-item-button', className)}
+    >
+      {/* {label} */}
+      {children}
+    </Button>
+  );
+}
+
+export const FilterItem = {
+  Button: FilterItemButton,
+  Divider: FilterItemDivider,
+};
