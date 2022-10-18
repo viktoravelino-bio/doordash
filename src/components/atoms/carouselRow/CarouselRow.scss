@@ -1,0 +1,28 @@
+@import '../../../scss/main.scss';
+
+.carousel-row__container {
+  background-color: white;
+
+  .carousel-row__header {
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > .icon-button {
+      background-color: rgb(213, 213, 213);
+      padding: 0.4rem;
+    }
+  }
+
+  .carousel-row__content {
+    background-color: white;
+    display: flex;
+    overflow-y: auto;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+
+    @include remove-scrollbar;
+  }
+}

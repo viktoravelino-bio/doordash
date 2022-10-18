@@ -1,0 +1,44 @@
+.card__container {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  min-width: 18rem;
+  max-width: 18rem;
+  width: 100%;
+
+  text-decoration: none;
+  color: black;
+
+  .card__image {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 9.2rem;
+    // height: 5rem;
+    object-fit: cover;
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    // padding: 1rem;
+
+    .card__title {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      > svg {
+        color: #00838a;
+      }
+    }
+
+    .card__text {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: rgb(96, 96, 96);
+    }
+  }
+}
