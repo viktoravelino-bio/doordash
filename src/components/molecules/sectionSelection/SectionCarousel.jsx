@@ -1,4 +1,3 @@
-import { Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ReactComponent as ListIcon } from './list-icon.svg';
 
@@ -31,7 +30,7 @@ export function SectionCarousel({ titles, carouselClassName, currentSection }) {
   useEffect(() => {
     if (!swiperRef) return;
     swiperRef.slideTo(currentSelectedIndex, 400);
-  }, [currentSelectedIndex]);
+  }, [currentSelectedIndex, swiperRef]);
 
   return (
     <div className={'section-carousel ' + carouselClassName}>

@@ -25,7 +25,7 @@ export const SearchInput = ({
 
   useEffect(() => {
     onChange(inputValue);
-  }, [inputValue]);
+  }, [inputValue, onChange]);
 
   return (
     <div className="search-input__container">

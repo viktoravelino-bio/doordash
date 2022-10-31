@@ -1,7 +1,5 @@
-import { ChevronDownIcon } from '../../../assets/icons';
 import { classNames } from '../../../lib/classNames';
 import { Button } from '../button/Button';
-import { Icon } from '../icon/Icon';
 import './FilterItem.scss';
 
 function FilterItemDivider() {

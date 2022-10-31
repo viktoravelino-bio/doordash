@@ -20,7 +20,7 @@ import {
   Soup,
 } from '../assets/cuisinesItems';
 
-export default [
+const cuisines = [
   { label: 'Bakery', icon: Bakery },
   { label: 'Drinks', icon: Drinks },
   { label: 'Chicken', icon: Chicken },
@@ -41,3 +41,5 @@ export default [
   { label: 'Mexican', icon: Mexican },
   { label: 'Soup', icon: Soup },
 ];
+
+export default cuisines;

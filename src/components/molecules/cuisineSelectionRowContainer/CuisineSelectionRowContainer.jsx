@@ -10,17 +10,13 @@ export function CuisineSelectionRowContainer({ className, ...props }) {
       className={classNames('cuisines-selection-row__container', className)}
     >
       <div>
-        {cuisineOptions.map((cuisine) => {
-          {
-            return (
-              <CuisineSelectionItem
-                key={cuisine.label}
-                item={cuisine}
-                isSelected={cuisine.label === 'Drinks'}
-              />
-            );
-          }
-        })}
+        {cuisineOptions.map((cuisine) => (
+          <CuisineSelectionItem
+            key={cuisine.label}
+            item={cuisine}
+            isSelected={cuisine.label === 'Drinks'}
+          />
+        ))}
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export function Sidebar({
     return () => {
       window.removeEventListener('click', onClose);
     };
-  }, [visible]);
+  }, [visible, onClose]);
 
   return (
     <aside

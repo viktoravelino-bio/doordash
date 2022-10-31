@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from 'react';
+import { forwardRef, useState } from 'react';
 import './FormControl.scss';
 
 export const FormControl = forwardRef(

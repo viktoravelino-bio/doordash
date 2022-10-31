@@ -15,7 +15,7 @@ function TabPillItem({
       {...props}
       className={classNames(
         'tab-pill__item ',
-        { muted: !(value == selectedTab) },
+        { muted: !(value === selectedTab) },
         className
       )}
       onClick={() => setSelectedTab(value)}

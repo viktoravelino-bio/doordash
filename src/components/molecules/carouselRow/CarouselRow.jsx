@@ -1,8 +1,6 @@
-import { ArrowRightIcon, DashPass } from '../../../assets/icons';
+import { DashPass } from '../../../assets/icons';
 import { Card } from '../../atoms/card/Card';
 import { Icon } from '../../atoms/icon/Icon';
-import { IconButton } from '../../atoms/iconButton/IconButton';
-
 import './CarouselRow.scss';
 
 export function CarouselRow({ cardSize, title, data, showTopDivider }) {

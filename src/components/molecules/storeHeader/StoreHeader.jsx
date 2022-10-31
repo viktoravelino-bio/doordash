@@ -23,7 +23,11 @@ export function StoreHeader({
         className="restaurant-header__cover"
         style={{ position: 'relative' }}
       >
-        <img className="restaurant-header__cover-img" src={coverImg} />
+        <img
+          className="restaurant-header__cover-img"
+          alt="Cover Img"
+          src={coverImg}
+        />
         <Avatar className="restaurant-header__logo" src={logo} size={75} />
       </div>
 

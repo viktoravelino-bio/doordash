@@ -9,6 +9,7 @@ function AvatarComponent(
 ) {
   return (
     <img
+      alt="avatar"
       {...props}
       className={classNames('avatar', className)}
       {...getComponentSize({ height, size, width })}

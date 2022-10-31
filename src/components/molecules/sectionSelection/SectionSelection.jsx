@@ -43,7 +43,7 @@ export function SectionSelection({
         observer.unobserve(section);
       });
     };
-  }, []);
+  }, [titles]);
 
   return (
     <div>

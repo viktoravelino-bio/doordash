@@ -3,7 +3,7 @@ import { Button } from '../button/Button';
 import './Card.scss';
 
 function CardImage(props) {
-  return <img {...props} className="card__image" />;
+  return <img {...props} alt="Card img" className="card__image" />;
 }
 
 function CardHighlightText(props) {

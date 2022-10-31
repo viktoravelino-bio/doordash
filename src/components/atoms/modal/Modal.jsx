@@ -1,4 +1,3 @@
-import { createPortal } from 'react-dom';
 import { classNames } from '../../../lib/classNames';
 import './Modal.scss';
 

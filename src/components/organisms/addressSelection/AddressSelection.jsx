@@ -22,9 +22,9 @@ const TAB_DAYS = Array.from({ length: 5 }, (_, i) => {
   date.setDate(date.getDate() + i);
   return {
     label:
-      i == 0
+      i === 0
         ? 'TODAY'
-        : i == 1
+        : i === 1
         ? 'TMR'
         : DAY[date.getDay()].slice(0, 3).toUpperCase(),
     value: date.getDate(),
