@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { classNames } from '../../../lib/classNames';
 import { CloseOutlinedIcon } from '../../../assets/icons';
 import { IconButton } from '../../atoms/iconButton/IconButton';
@@ -10,6 +10,7 @@ export function Sidebar({
   children,
   fromRight,
   className,
+  onScroll = () => {},
   ...props
 }) {
   const headerRef = useRef(null);
@@ -22,6 +23,22 @@ export function Sidebar({
     }
   };
 
+  useEffect(() => {
+    if (visible) {
+      setTimeout(() => {
+        window.addEventListener('click', onClose);
+      }, 0);
+    }
+
+    if (!visible) {
+      window.removeEventListener('click', onClose);
+    }
+
+    return () => {
+      window.removeEventListener('click', onClose);
+    };
+  }, [visible]);
+
   return (
     <aside
       {...props}
@@ -31,8 +48,9 @@ export function Sidebar({
       })}
       onScroll={(e) => {
         handleShowHeaderShadowOnScroll(e);
-        props.onScroll(e);
+        onScroll(e);
       }}
+      onClick={(e) => e.stopPropagation()}
     >
       <div className="sidebar__header" ref={headerRef}>
         <IconButton icon={CloseOutlinedIcon} onClick={onClose} />

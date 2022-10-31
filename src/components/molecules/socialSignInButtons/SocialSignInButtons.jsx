@@ -1,4 +1,5 @@
 import { SocialButton } from '../../atoms/socialButton/SocialButton';
+
 import './SocialSignInButtons.scss';
 
 export const SocialSignInButtons = ({ className, providers = {} }) => {

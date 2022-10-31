@@ -7,6 +7,7 @@ import { CuisinesModal } from './CuisinesModal';
 import { Portal } from '../../atoms/portal/Portal';
 import { RatingsModal } from './RatingsModal';
 import './Filter.scss';
+import { PriceModal } from './PriceModal';
 
 function Filter() {
   const containerRef = useRef(null);
@@ -94,7 +95,7 @@ function Filter() {
           )}
 
           {modalContent === 'price' && (
-            <CuisinesModal
+            <PriceModal
               onReset={() => console.log('Reset cuisine filter')}
               onApply={() => console.log('Apply cuisine filter')}
             />

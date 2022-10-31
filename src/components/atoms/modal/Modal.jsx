@@ -33,12 +33,6 @@ function ModalContainer({ children, className, onClose, fullScreen, visible }) {
   );
 }
 
-// export const Modal = (props) =>
-//   createPortal(
-//     <ModalContainer {...props} />,
-//     document.getElementById('portal-root')
-//   );
-
 export const Modal = Object.assign(ModalContainer, {
   Header: ModalHeader,
   Body: ModalBody,

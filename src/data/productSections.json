@@ -1,0 +1,39 @@
+{
+  "productSection": [
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/7aa72e74-9e0e-4d9d-951d-a4b10b22205a-retina-large.SVG",
+      "label": "Offers",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/8768c450-b2c7-47ed-890b-ff4673f58b6b-retina-large.SVG",
+      "label": "Grocery",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/e321229c-dff2-4791-a4ad-df1a99dc4ef5-retina-large.SVG",
+      "label": "Convenience",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/be22b51d-1910-4774-a7ad-0539a1c10c8d-retina-large.SVG",
+      "label": "Drugstore",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/afe53fac-c959-4c82-9bf2-c730457241eb-retina-large.SVG",
+      "label": "Premium",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/e8c6079e-945c-4af8-a474-79e2335900c2-retina-large.SVG",
+      "label": "Pet",
+      "href": "#"
+    },
+    {
+      "image": "https://img.cdn4dd.com/s/media/photosV2/ba05c1cf-1691-41ed-be78-ccbb429d4fc3-retina-large.SVG",
+      "label": "Gifts",
+      "href": "#"
+    }
+  ]
+}

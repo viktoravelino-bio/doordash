@@ -2,6 +2,16 @@
 
 .carousel-row__container {
   background-color: white;
+  padding-bottom: 1rem;
+
+  .carouser__divider {
+    height: 0.625rem;
+    background-color: rgb(247, 247, 247);
+    // margin: 1rem 0;
+    border: 1px solid rgb(231, 231, 231);
+    border-left-width: 0;
+    border-left-width: 0;
+  }
 
   .carousel-row__header {
     padding: 1rem;
@@ -20,7 +30,7 @@
     display: flex;
     overflow-y: auto;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding: 0 1rem;
 
     @include remove-scrollbar;

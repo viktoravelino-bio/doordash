@@ -5,12 +5,18 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import 'animate.css';
+import { BrowserRouter } from 'react-router-dom';
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <ShoppingCartProvider>
+      <App />
+    </ShoppingCartProvider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

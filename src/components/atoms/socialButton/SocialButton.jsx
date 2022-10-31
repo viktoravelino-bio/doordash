@@ -21,6 +21,7 @@ export const SocialButton = ({
   return (
     <button className={`social-button ${provider}`} onClick={handler} {...rest}>
       <Icon width={24} height={24} fill="currentColor" />
+
       <span>{label}</span>
     </button>
   );

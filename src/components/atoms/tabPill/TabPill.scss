@@ -1,0 +1,15 @@
+.tab-pill__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d6d6d6;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 1000px;
+  cursor: pointer;
+
+  .tab-pill__item {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    height: fit-content;
+  }
+}

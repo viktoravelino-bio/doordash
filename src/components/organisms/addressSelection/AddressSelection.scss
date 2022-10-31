@@ -1,0 +1,78 @@
+@import '../../../scss/main.scss';
+
+.address-selection__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  height: 48px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  background-color: white;
+
+  > button {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: url('../../../assets/icons/chevron-down.svg');
+      width: 10px;
+      margin-left: 4px;
+      flex-shrink: 0;
+    }
+  }
+
+  > span {
+    font-weight: regular;
+    font-size: 14px;
+    color: rgb(109, 109, 109);
+  }
+}
+
+.address-selection__delivery-modal {
+  .body {
+    padding: 1rem 1rem;
+
+    .address-selection__tab-pill {
+      margin: 0.5rem auto 1rem auto;
+      & .label {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 100%;
+      }
+
+      & .value {
+        line-height: 80%;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
+
+    .address-selection__delivery-type {
+      margin: 0.5rem auto 1rem auto;
+    }
+  }
+}
+
+.address-selection__address-modal {
+  .body {
+    padding: 1rem 1rem;
+  }
+}
+
+@include respond-to('medium') {
+  .address-selection__container {
+    &.main-page {
+      display: none;
+    }
+  }
+}

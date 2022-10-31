@@ -1,16 +1,15 @@
-import './App.css';
-// import { Filter } from './components/molecules/filter/Filter';
-
-import { ShowHeader } from './pages/ShowHeader';
-import { ShowSignInModal } from './pages/ShowSignInModal';
+import { Route, Routes } from 'react-router-dom';
+import { MainPage } from './pages/MainPage';
+import { StorePage } from './pages/StorePage';
 
 function App() {
   return (
-    <div className="App">
-      {/* <ShowSignInModal /> */}
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="store/:id" element={<StorePage />} />
 
-      <ShowHeader />
-    </div>
+      <Route path="*" element={<div>404</div>} />
+    </Routes>
   );
 }
 

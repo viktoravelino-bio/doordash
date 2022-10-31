@@ -13,26 +13,6 @@ const TABS = {
   FORGOT_PASSWORD: 'FORGOT_PASSWORD',
 };
 
-/**
- * @typedef {Object} Providers
- * @property {string} label
- * @property {() => void} handler
- */
-
-/**
- * @typedef {Object} AuthModalProps
- * @property {boolean} isOpen
- * @property {() => void} onClose
- * @property {(signInData) => void} signIngHandler
- * @property {(signUpData) => void} signUpHandler
- * @property {(forgotPasswordData) => void} forgotPasswordHandler
- * @property {Providers} providers {@link Providers}
- */
-
-/**
- * @param {AuthModalProps} {@link AuthModalProps}
- * @returns {JSX.Element}
- */
 export function AuthModal({
   isOpen,
   onClose,

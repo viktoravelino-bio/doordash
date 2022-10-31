@@ -1,12 +1,12 @@
 import './SearchInput.scss';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { classNames } from '../../../lib/classNames';
-
+import { CloseIcon, ArrowLeftIcon, SearchIcon } from '../../../assets/icons';
 import { Icon } from '../../atoms/icon/Icon';
 
 export const SearchInput = ({
-  onChange,
-  value,
+  onChange = () => {},
+  value = '',
   onFocus = () => {},
   onBlur = () => {},
   searchResultValues,
@@ -14,24 +14,29 @@ export const SearchInput = ({
   keyExtractor,
 }) => {
   const [inputFocused, setInputFocused] = useState(false);
+  const [inputValue, setInputValue] = useState(value);
 
   const showSheet =
-    inputFocused && Boolean(value) && Boolean(searchResultValues);
+    inputFocused && Boolean(inputValue) && Boolean(searchResultValues);
 
   function handleChange(e) {
-    onChange(e.target.value);
+    setInputValue(e.target.value);
   }
+
+  useEffect(() => {
+    onChange(inputValue);
+  }, [inputValue]);
 
   return (
     <div className="search-input__container">
       <div
         className={classNames('search-input__input', { focused: inputFocused })}
       >
-        <Icon icon={inputFocused ? 'arrow-left' : 'search'} size={20} />
+        <Icon icon={inputFocused ? ArrowLeftIcon : SearchIcon} size={20} />
         <input
           type="text"
           placeholder="Search"
-          value={value}
+          value={inputValue}
           onChange={handleChange}
           onFocus={(e) => {
             setInputFocused(true);
@@ -42,7 +47,9 @@ export const SearchInput = ({
             onBlur(e);
           }}
         />
-        {value && <Icon icon="close" size={18} onClick={() => onChange('')} />}
+        {inputValue && (
+          <Icon icon={CloseIcon} size={18} onClick={() => setInputValue('')} />
+        )}
       </div>
 
       <div

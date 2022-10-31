@@ -1,0 +1,11 @@
+.price-modal__body {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+
+  > .btn {
+    min-width: 3.5rem;
+    padding: 1.2rem 0;
+  }
+}

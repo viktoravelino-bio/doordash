@@ -1,9 +1,20 @@
+:root {
+  --color-highlight: #00838a;
+  --color-light-gray: rgb(231, 231, 231);
+  --color-text-muted: rgb(118, 118, 118);
+}
+
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
 }
 
 body {

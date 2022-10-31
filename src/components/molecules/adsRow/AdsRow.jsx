@@ -31,6 +31,7 @@ export function AdsRow() {
       {ads.map(
         ({ buttonColor, buttonLabel, color, href, image, subtitle, title }) => (
           <Card
+            key={title}
             className="ads__card"
             style={{ backgroundColor: color }}
             href={href}

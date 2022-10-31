@@ -18,6 +18,7 @@ export const FormControl = forwardRef(
           {label && <label className="form-control__label">{label}</label>}
           {auxText && <span className="form-control__aux-text">{auxText}</span>}
         </div>
+
         <div
           className={`form-control__input__container ${
             Boolean(error) ? 'error' : ''

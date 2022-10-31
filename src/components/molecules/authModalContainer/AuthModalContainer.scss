@@ -28,7 +28,6 @@ $modalBoxShadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-
   transition: opacity 0.2s;
 
   > .auth-modal__overlay {
@@ -47,6 +46,7 @@ $modalBoxShadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     flex-direction: column;
 
     width: 100%;
+    height: 100%;
     box-shadow: $modalBoxShadow;
     overflow: hidden;
     scrollbar-width: thin;

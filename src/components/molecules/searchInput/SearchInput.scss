@@ -6,6 +6,7 @@ $HEADER-HEIGHT: 64px;
   height: $HEADER-HEIGHT;
   position: relative;
   display: flex;
+  min-width: 0;
 
   & .search-input__input {
     border: 2px solid transparent;
@@ -13,12 +14,12 @@ $HEADER-HEIGHT: 64px;
     margin: auto auto;
     display: flex;
     align-items: center;
+
     gap: 8px;
     background-color: rgb(247, 247, 247);
     color: rgb(96, 96, 96);
     padding: 0 10px;
     border-radius: 1000px;
-    position: relative;
     z-index: 1;
 
     &.focused {
@@ -55,7 +56,6 @@ $HEADER-HEIGHT: 64px;
     padding-top: $HEADER-HEIGHT;
 
     animation-duration: 0.15s;
-    display: block;
     border: 1px solid rgb(214, 214, 214);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
     opacity: 0;

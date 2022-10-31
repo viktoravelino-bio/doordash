@@ -12,7 +12,7 @@ export const SearchResultItem = ({ item }) => {
 
   return (
     <a className="search-input__results__item" href="#">
-      <Avatar url={item.logoUrl} />
+      <Avatar src={item.logoUrl} />
 
       <div className="search-input__results__item__body">
         <h4>{item.name}</h4>

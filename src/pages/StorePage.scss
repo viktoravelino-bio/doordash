@@ -1,0 +1,14 @@
+.menu-items__container {
+  padding-block: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+
+  > a {
+    max-width: 30em;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

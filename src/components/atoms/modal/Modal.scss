@@ -48,9 +48,12 @@
   }
 
   &.full-screen {
+    display: block;
+
     .modal__content {
-      max-width: unset;
-      max-height: unset;
+      translate: 0;
+      max-width: initial;
+      max-height: initial;
       width: 100%;
       height: 100%;
       border-radius: 0;
