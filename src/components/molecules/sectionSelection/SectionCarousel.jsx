@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 
 export function SectionCarousel({ titles, carouselClassName, currentSection }) {
   const [swiperRef, setSwiperRef] = useState(null);
-  console.log(currentSection);
 
   const currentSelectedIndex = titles.findIndex(
     (title) => title === currentSection
@@ -36,13 +35,10 @@ export function SectionCarousel({ titles, carouselClassName, currentSection }) {
     <div className={'section-carousel ' + carouselClassName}>
       <ListIcon style={{ cursor: 'pointer' }} />
       <Swiper
-        // modules={[Navigation]}
         onSwiper={setSwiperRef}
         slidesPerView="auto"
         spaceBetween={20}
         centeredSlides={false}
-        // slidesOffsetBefore={10}
-        // navigation={true}
       >
         {titles.map((title) => (
           <SwiperSlide
