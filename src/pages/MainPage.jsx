@@ -11,23 +11,24 @@ export function MainPage() {
   return (
     <div>
       <Header />
+      <div style={{ maxWidth: '50rem', marginInline: 'auto' }}>
+        <ProductSectionContainer />
 
-      <ProductSectionContainer />
+        <CuisineSelectionRowContainer />
 
-      <CuisineSelectionRowContainer />
+        <Filter />
 
-      <Filter />
+        <AdsRow />
 
-      <AdsRow />
+        <CarouselRow title="Offers for You" cardSize="sm" data={offersForYou} />
+        <CarouselRow
+          title="Wallet Friendly"
+          data={walletFriendly}
+          showTopDivider
+        />
 
-      <CarouselRow title="Offers for You" cardSize="sm" data={offersForYou} />
-      <CarouselRow
-        title="Wallet Friendly"
-        data={walletFriendly}
-        showTopDivider
-      />
-
-      <div style={{ height: '1000px', backgroundColor: 'white' }}></div>
+        <div style={{ height: '1000px', backgroundColor: 'white' }}></div>
+      </div>
     </div>
   );
 }

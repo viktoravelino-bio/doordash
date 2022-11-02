@@ -1,3 +1,5 @@
+@import '../../../scss/main.scss';
+
 .modal__container {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -8,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
@@ -57,6 +60,20 @@
       width: 100%;
       height: 100%;
       border-radius: 0;
+    }
+  }
+}
+
+@include respond-to('small') {
+  .modal__container {
+    &.full-screen {
+      display: flex;
+      .modal__content {
+        width: max-content;
+        height: max-content;
+        translate: 0px -10%;
+        border-radius: 0.5rem;
+      }
     }
   }
 }
