@@ -26,3 +26,4 @@ export { ReactComponent as WarningIcon } from './warning-icon.svg';
 export { ReactComponent as RestaurantIcon } from './restaurant-icon.svg';
 export { ReactComponent as HouseIcon } from './house-icon.svg';
 export { ReactComponent as CoffeeIcon } from './coffee-icon.svg';
+export { ReactComponent as PersonIcon } from './person.svg';

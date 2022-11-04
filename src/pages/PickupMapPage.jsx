@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { BottomSheet } from 'react-spring-bottom-sheet';
+import { PersonIcon, StarIcon } from '../assets/icons';
+import { Icon } from '../components/atoms/icon/Icon';
 import { GoogleMap } from '../components/molecules/googleMap/GoogleMap';
 import { Header } from '../components/organisms/header/Header';
 
@@ -44,24 +46,40 @@ export function PickupMapPage() {
       {/* <button onClick={() => setOpen(!open)}>Open</button> */}
 
       <BottomSheet
-        open={false}
+        open={true}
         blocking={false}
+        defaultSnap={({ maxHeight }) => maxHeight / 3}
         snapPoints={({ maxHeight }) => [
-          maxHeight - maxHeight / 10,
+          maxHeight - maxHeight / 6,
           maxHeight / 3,
           maxHeight / 10,
         ]}
       >
         <div style={{ paddingInline: '1rem' }}>
           <h2>All Stores</h2>
-          <div
-            style={{
-              height: '200px',
-              width: '200px',
-              backgroundColor: 'orange',
-              marginInline: 'auto',
-            }}
-          ></div>
+
+          <div>
+            <h3>Aroma Espresso Bar</h3>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.3rem',
+                color: '#767676',
+              }}
+            >
+              <span>
+                <Icon icon={StarIcon} size={15} />
+                4.6 (194 ratings)
+              </span>
+              <span>•</span>
+              <span>$</span>
+              <span>•</span>
+              <span>
+                <Icon icon={PersonIcon} size={20} />2 min
+              </span>
+            </div>
+          </div>
         </div>
       </BottomSheet>
     </div>

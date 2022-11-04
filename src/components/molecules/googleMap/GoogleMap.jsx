@@ -16,7 +16,7 @@ const center = {
 export function GoogleMapRoot({ data }) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyB6mgC-vVY_nIQpugAzhH9lQW4GzkNUL0k',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
   });
 
   const [map, setMap] = useState(null);
@@ -47,7 +47,11 @@ export function GoogleMapRoot({ data }) {
         <>
           <Marker loc={center} type="home" active />
           {data.map((item) => (
-            <Marker {...item} onClick={() => console.log(item.id)} />
+            <Marker
+              key={item.id}
+              {...item}
+              onClick={() => console.log(item.id)}
+            />
           ))}
         </>
       </GMComponent>

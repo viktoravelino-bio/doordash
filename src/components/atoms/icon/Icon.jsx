@@ -21,7 +21,7 @@ function IconComponent(
       {...getComponentSize({ height, size, width })}
       fill={fill}
       ref={ref}
-      style={{ flexShrink: 0, ...style }}
+      style={{ flexShrink: 0, ...style, verticalAlign: 'middle' }}
     />
   );
 }
