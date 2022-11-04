@@ -1,3 +1,5 @@
-### Display components
+resources:
 
-Go to App.js file and comment or uncomment the component
+- GoogleMaps:
+
+  [MapStyling](https://mapstyle.withgoogle.com/)

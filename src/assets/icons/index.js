@@ -23,3 +23,6 @@ export { ReactComponent as ArrowRightIcon } from './arrow-right.svg';
 export { ReactComponent as PlusIcon } from './plus.svg';
 export { ReactComponent as MinusIcon } from './minus.svg';
 export { ReactComponent as WarningIcon } from './warning-icon.svg';
+export { ReactComponent as RestaurantIcon } from './restaurant-icon.svg';
+export { ReactComponent as HouseIcon } from './house-icon.svg';
+export { ReactComponent as CoffeeIcon } from './coffee-icon.svg';

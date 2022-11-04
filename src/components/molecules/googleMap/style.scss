@@ -1,0 +1,93 @@
+:root {
+  --marker-color: white;
+  --icon-color: red;
+}
+
+// .marker {
+//   transition: all 0.2s;
+//   cursor: pointer;
+//   // position: absolute;
+//   // top: 0;
+//   // bottom: 0;
+
+//   &.active {
+//     --marker-color: black;
+//     color: white;
+//     padding: 1rem;
+//   }
+
+//   // height: 100px;
+
+//   color: red;
+
+//   background-color: var(--marker-color);
+//   padding: 0.5rem;
+//   position: relative;
+//   border-radius: 100%;
+//   box-shadow: 0 7px 10px 0.5px rgba(0, 0, 0, 0.4);
+
+//   svg {
+//     vertical-align: middle;
+//   }
+
+//   &::after {
+//     transition: all 0.2s;
+//     content: '';
+//     border-inline: 5px solid transparent;
+//     border-top: 6px solid var(--marker-color);
+//     bottom: -5px;
+//     position: absolute;
+//     right: 50%;
+//     translate: 50% 0;
+//   }
+// }
+
+.marker {
+  position: relative;
+  cursor: pointer;
+
+  > div {
+    box-shadow: 0 7px 10px 0.5px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s;
+    position: absolute;
+    background-color: var(--marker-color);
+    border-radius: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+
+    svg {
+      transition: all 0.2s;
+      vertical-align: middle;
+      // color: var(--icon-color);
+    }
+  }
+
+  &:hover,
+  &.active {
+    --marker-color: black;
+    --icon-color: white;
+
+    > div {
+      // padding: 1rem;
+    }
+
+    svg {
+      height: 1.8rem;
+      width: 1.8rem;
+      color: white;
+    }
+  }
+
+  &::after {
+    transition: all 0.2s;
+    content: '';
+    border-inline: 5px solid transparent;
+    border-top: 6px solid var(--marker-color);
+    bottom: -5px;
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+  }
+}

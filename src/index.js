@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
-import 'animate.css';
+import './scss/main.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
