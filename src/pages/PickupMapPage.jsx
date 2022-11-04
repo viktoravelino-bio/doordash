@@ -36,14 +36,11 @@ const data = [
 ];
 
 export function PickupMapPage() {
-  const [open, setOpen] = useState(false);
   return (
     <div>
       <Header />
 
       <GoogleMap data={data} />
-
-      {/* <button onClick={() => setOpen(!open)}>Open</button> */}
 
       <BottomSheet
         open={true}
