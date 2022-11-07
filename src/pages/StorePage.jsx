@@ -2,6 +2,7 @@ import { menuData } from '../assets/data/menuData';
 import { restaurantData } from '../assets/data/restaurantData';
 import { Card } from '../components/atoms/card/Card';
 import { MenuCardItem } from '../components/molecules/menuCardItem/MenuCardItem';
+import { ReviewCard } from '../components/molecules/reviewCard/ReviewCard';
 import { SectionSelection } from '../components/molecules/sectionSelection/SectionSelection';
 import { StoreHeader } from '../components/molecules/storeHeader/StoreHeader';
 import { Header } from '../components/organisms/header/Header';
@@ -15,6 +16,8 @@ export function StorePage() {
 
       <div style={{ maxWidth: '50em', marginInline: 'auto' }}>
         <StoreHeader {...restaurantData} />
+
+        <ReviewCard />
 
         <div style={{ display: 'flex', overflowX: 'auto' }}>
           <Card size="sm">

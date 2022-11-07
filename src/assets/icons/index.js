@@ -27,3 +27,4 @@ export { ReactComponent as RestaurantIcon } from './restaurant-icon.svg';
 export { ReactComponent as HouseIcon } from './house-icon.svg';
 export { ReactComponent as CoffeeIcon } from './coffee-icon.svg';
 export { ReactComponent as PersonIcon } from './person.svg';
+export { ReactComponent as StarOutlinedIcon } from './start-outlined-icon.svg';
