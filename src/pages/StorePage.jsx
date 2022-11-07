@@ -17,7 +17,45 @@ export function StorePage() {
       <div style={{ maxWidth: '50em', marginInline: 'auto' }}>
         <StoreHeader {...restaurantData} />
 
-        <ReviewCard />
+        <div
+          style={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            gridAutoColumns: '20rem',
+            gap: '1rem',
+            overflowX: 'auto',
+
+            overflowY: 'clip',
+            paddingBottom: '0.5rem',
+          }}
+        >
+          <ReviewCard.NewCard userName="John D." />
+          <ReviewCard
+            userName="John D."
+            date="1/27/22"
+            review="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum maxime suscipit autem sint vero inventore et ex? Nobis animi recusandae ipsum quod veritatis hic corrupti enim earum ducimus. Hic!"
+            rating="2"
+          />
+
+          <ReviewCard
+            userName="John D."
+            date="1/27/22"
+            review="Lorem"
+            rating="3"
+          />
+          <ReviewCard
+            userName="John D."
+            date="1/27/22"
+            review="Lorem"
+            rating="4"
+          />
+          <ReviewCard
+            userName="John D."
+            date="1/27/22"
+            review="Lorem"
+            rating="5"
+          />
+        </div>
 
         <div style={{ display: 'flex', overflowX: 'auto' }}>
           <Card size="sm">

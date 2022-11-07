@@ -1,0 +1,48 @@
+.new-review-card {
+  //   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: rgb(247, 247, 247);
+
+  .new-review-card__rating {
+    > svg {
+      cursor: pointer;
+      color: #858585;
+      fill: transparent;
+    }
+
+    &.active > svg {
+      fill: #ffd500;
+      color: #ffd500;
+    }
+
+    svg:hover ~ *,
+    svg.active ~ * {
+      color: #858585;
+      fill: transparent;
+    }
+
+    &:hover > svg {
+      fill: #ffd500;
+      color: #ffd500;
+    }
+
+    svg:hover ~ * {
+      color: #858585;
+      fill: transparent;
+    }
+  }
+
+  > span {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #858585;
+  }
+}

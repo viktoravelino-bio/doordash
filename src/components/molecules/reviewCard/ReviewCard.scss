@@ -1,45 +1,35 @@
-.new-review-card {
-  //   border: 1px solid black;
+.review-card {
+  border: 1px solid rgb(180, 180, 180);
   border-radius: 0.5rem;
   padding: 1.5rem 1rem;
-  max-width: 20rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  background-color: rgb(247, 247, 247);
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
 
-  .new-review-card__rating {
-    > svg {
-      cursor: pointer;
-      color: #858585;
-      fill: transparent;
-    }
+  .review-card__header {
+    color: #535353;
+    .review-card__rating {
+      display: flex;
+      flex-wrap: nowrap;
 
-    &.active > svg {
-      fill: #ffd500;
-      color: #ffd500;
+      > svg.active ~ * {
+        color: #535353;
+        fill: transparent;
+      }
     }
-
-    svg:hover ~ *,
-    svg.active ~ * {
-      color: #858585;
-      fill: transparent;
-    }
-
-    &:hover > svg {
-      fill: #ffd500;
-      color: #ffd500;
-    }
-
-    svg:hover ~ * {
-      color: #858585;
-      fill: transparent;
-    }
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 
-  > span {
-    cursor: pointer;
-    font-size: 0.875rem;
-    color: #858585;
+  > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    letter-spacing: 0.5px;
   }
 }

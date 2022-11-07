@@ -1,35 +1,35 @@
 import { useState } from 'react';
 import { StarOutlinedIcon } from '../../../assets/icons';
 import { Icon } from '../../atoms/icon/Icon';
+import { NewReviewCard } from './NewReviewCard';
 import './ReviewCard.scss';
 
-export function ReviewCard({ onChange, initialValue = 0 }) {
-  const [rating, setRating] = useState(initialValue);
-
-  function handleChange(value) {
-    setRating(value);
-    onChange(value);
-    console.log('Open modal for writing review with rating: ', value);
-  }
-
+export function ReviewCardRoot({ userName, rating = 0, date, review }) {
   return (
-    <div className="new-review-card">
-      <h5>Viktor a.</h5>
+    <div className="review-card">
+      <h5>{userName}</h5>
 
-      <div className={`new-review-card__rating ${rating > 0 ? 'active' : ''}`}>
-        {Array.from({ length: 5 }, (_, i) => (
-          <Icon
-            className={`${rating === i + 1 ? 'active' : ''}`}
-            icon={StarOutlinedIcon}
-            size={30}
-            onClick={() => handleChange(i + 1)}
-          />
-        ))}
+      <div className="review-card__header">
+        <div className="review-card__rating">
+          {Array.from({ length: 5 }, (_, i) => (
+            <Icon
+              icon={StarOutlinedIcon}
+              size={11}
+              className={i + 1 == rating ? 'active' : ''}
+            />
+          ))}
+        </div>
+        <span>•</span>
+        <span>{date}</span>
+        <span>•</span>
+        <span>DoorDash Order</span>
       </div>
 
-      <span onClick={() => console.log('Open modal for writing review')}>
-        Start your review
-      </span>
+      <p>{review}</p>
     </div>
   );
 }
+
+export const ReviewCard = Object.assign(ReviewCardRoot, {
+  NewCard: NewReviewCard,
+});
