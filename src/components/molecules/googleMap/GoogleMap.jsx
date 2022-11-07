@@ -42,6 +42,8 @@ export function GoogleMapRoot({ data }) {
         options={{
           disableDefaultUI: true,
           styles: styleMap,
+          disableDoubleClickZoom: true,
+          gestureHandling: 'greedy',
         }}
       >
         <>

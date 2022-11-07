@@ -1,0 +1,61 @@
+.restaurant-section {
+  --color-info-text: #767676;
+
+  margin-top: 1rem;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  padding-bottom: 1rem;
+
+  .restaurant-section__info {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-info-text);
+    margin-top: 0.25rem;
+    font-weight: bold;
+  }
+
+  .restaurant-section__working-hours {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-info-text);
+    margin-top: 0.25rem;
+    font-weight: bold;
+    .open {
+      color: green;
+    }
+
+    .closed {
+      color: rgb(199, 0, 0);
+    }
+  }
+
+  .restaurant-section__action-buttons {
+    margin-top: 1rem;
+    display: flex;
+
+    gap: 1rem;
+
+    > * {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+
+      > span {
+        font-size: 0.875rem;
+
+        color: var(--color-info-text);
+      }
+      > button {
+        padding-block: 1.3rem;
+        width: 100%;
+        border: 1px solid lightgray;
+        background-color: transparent;
+      }
+    }
+  }
+}
