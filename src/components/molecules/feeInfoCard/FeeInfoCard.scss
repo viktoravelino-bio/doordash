@@ -1,0 +1,44 @@
+.fees-info-card {
+  margin-block: 1rem;
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20rem;
+
+  > div:not(:nth-child(2)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+
+    > h3 {
+      font-size: 1rem;
+    }
+
+    > span {
+      font-size: 0.875rem;
+      color: rgb(118, 118, 118);
+    }
+  }
+
+  &.delivery {
+    > div:first-child {
+      background-color: rgb(215, 245, 245);
+      > h3 {
+        color: rgb(0, 131, 138);
+      }
+    }
+  }
+
+  .divider {
+    background-color: rgb(193, 193, 193);
+    width: 1px;
+    height: 2rem;
+  }
+}

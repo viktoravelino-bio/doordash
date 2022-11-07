@@ -1,6 +1,7 @@
 import { menuData } from '../assets/data/menuData';
 import { restaurantData } from '../assets/data/restaurantData';
 import { Card } from '../components/atoms/card/Card';
+import { FeeInfoCard } from '../components/molecules/feeInfoCard/FeeInfoCard';
 import { MenuCardItem } from '../components/molecules/menuCardItem/MenuCardItem';
 import { ReviewCard } from '../components/molecules/reviewCard/ReviewCard';
 import { SectionSelection } from '../components/molecules/sectionSelection/SectionSelection';
@@ -17,6 +18,20 @@ export function StorePage() {
       <div style={{ maxWidth: '50em', marginInline: 'auto' }}>
         <StoreHeader {...restaurantData} />
 
+        <FeeInfoCard type="delivery" fee="0" time="8" />
+        <FeeInfoCard type="pickup" fee="0" time="8" />
+
+        <div style={{ display: 'flex', overflowX: 'auto' }}>
+          <Card size="sm">
+            <Card.Body>
+              <Card.Image src="https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=50/media/photosV2/87fd9524-11c6-4c60-af23-4fa6cd64ae10-442ad679-a871-4d0e-a995-ca39309ee19d-retina-large.JPG " />
+              <Card.Title>Weekender Breakfast</Card.Title>
+              <Card.Text>CA$18.59</Card.Text>
+              <Card.ActionButton>Add</Card.ActionButton>
+            </Card.Body>
+          </Card>
+        </div>
+
         <div
           style={{
             display: 'grid',
@@ -24,7 +39,7 @@ export function StorePage() {
             gridAutoColumns: '20rem',
             gap: '1rem',
             overflowX: 'auto',
-
+            marginBlock: '1rem',
             overflowY: 'clip',
             paddingBottom: '0.5rem',
           }}
@@ -55,17 +70,6 @@ export function StorePage() {
             review="Lorem"
             rating="5"
           />
-        </div>
-
-        <div style={{ display: 'flex', overflowX: 'auto' }}>
-          <Card size="sm">
-            <Card.Body>
-              <Card.Image src="https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=50/media/photosV2/87fd9524-11c6-4c60-af23-4fa6cd64ae10-442ad679-a871-4d0e-a995-ca39309ee19d-retina-large.JPG " />
-              <Card.Title>Weekender Breakfast</Card.Title>
-              <Card.Text>CA$18.59</Card.Text>
-              <Card.ActionButton>Add</Card.ActionButton>
-            </Card.Body>
-          </Card>
         </div>
 
         <div style={{ paddingInline: '0.5em' }}>

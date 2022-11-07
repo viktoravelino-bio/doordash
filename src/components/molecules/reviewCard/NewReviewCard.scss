@@ -12,6 +12,7 @@
   background-color: rgb(247, 247, 247);
 
   .new-review-card__rating {
+    width: fit-content;
     > svg {
       cursor: pointer;
       color: #858585;
