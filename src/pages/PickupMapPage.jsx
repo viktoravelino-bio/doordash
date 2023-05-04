@@ -1,7 +1,4 @@
-import { useState } from 'react';
 
-import { PersonIcon, StarIcon } from '../assets/icons';
-import { Icon } from '../components/atoms/icon/Icon';
 import { GoogleMap } from '../components/molecules/googleMap/GoogleMap';
 import { BottomSheet } from '../components/organisms/bottomSheet/BottomSheet';
 import { Header } from '../components/organisms/header/Header';

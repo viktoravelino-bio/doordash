@@ -11,6 +11,7 @@ export const SearchResultItem = ({ item }) => {
   const isOpen = currentHours >= start && currentHours <= end;
 
   return (
+    // eslint-disable-next-line jsx-a11y/anchor-is-valid
     <a className="search-input__results__item" href="#">
       <Avatar src={item.logoUrl} />
 

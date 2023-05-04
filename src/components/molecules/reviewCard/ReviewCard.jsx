@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { StarOutlinedIcon } from '../../../assets/icons';
 import { Icon } from '../../atoms/icon/Icon';
 import { NewReviewCard } from './NewReviewCard';
@@ -15,7 +14,7 @@ export function ReviewCardRoot({ userName, rating = 0, date, review }) {
             <Icon
               icon={StarOutlinedIcon}
               size={11}
-              className={i + 1 == rating ? 'active' : ''}
+              className={i + 1 === rating ? 'active' : ''}
             />
           ))}
         </div>

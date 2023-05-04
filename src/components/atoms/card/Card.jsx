@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import { classNames } from '../../../lib/classNames';
 import { Button } from '../button/Button';
 import './Card.scss';
