@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Avatar } from '../../../atoms/avatar/Avatar';
 import './SearchResultItem.scss';
 
@@ -12,7 +13,7 @@ export const SearchResultItem = ({ item }) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    <a className="search-input__results__item" href="#">
+    <Link className="search-input__results__item" href="#">
       <Avatar src={item.logoUrl} />
 
       <div className="search-input__results__item__body">
@@ -22,6 +23,6 @@ export const SearchResultItem = ({ item }) => {
           {isOpen ? `Open • Closes at ${end}` : `Closed • Opens at ${start}`}
         </p>
       </div>
-    </a>
+    </Link>
   );
 };

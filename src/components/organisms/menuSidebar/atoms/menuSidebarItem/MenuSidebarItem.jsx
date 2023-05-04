@@ -1,13 +1,20 @@
 import './MenuSidebarItem.scss';
 import { Icon } from '../../../../atoms/icon/Icon';
+import {  NavLink } from 'react-router-dom';
 
 export const MenuSidebarItem = ({ icon, label, ...rest }) => {
-  const active = 'offers' === rest.href;
+  // const active = 'offers' === rest.href;
 
   return (
-    <a className={`sidebar__menu-item ${active ? 'active' : ''}`} {...rest}>
+    <NavLink
+      className={({ isActive }) =>
+        `sidebar__menu-item ${isActive && !!rest.to ? 'active' : ''}`
+      }
+      {...rest}
+      end
+    >
       {icon && <Icon icon={icon} />}
       <span>{label}</span>
-    </a>
+    </NavLink>
   );
 };

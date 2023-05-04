@@ -23,12 +23,14 @@ import { ShoppingCartSidebar } from '../shoppingCartSidebar/ShoppingCartSidebar'
 import { MenuSidebar } from '../menuSidebar/MenuSidebar';
 import { MenuSidebarItem } from '../menuSidebar/atoms/menuSidebarItem/MenuSidebarItem';
 import { AuthModal } from '../authModal/AuthModal';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Header = ({ className }) => {
   const [value, setValue] = useState('');
   const [showShoppingCartSidebar, setShowShoppingCartSidebar] = useState(false);
   const [showSideMenu, setShowSideMenu] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const navigate = useNavigate();
 
   function toggleShoppingCartSidebar() {
     setShowShoppingCartSidebar((prev) => !prev);
@@ -44,13 +46,23 @@ export const Header = ({ className }) => {
     <>
       <header className={classNames('header__container', className)}>
         <IconButton icon={MenuIcon} onClick={toggleSideMenu} />
-
-        <DoorDashLogo className="logo" />
-        <DoorDashLogoFull className="logo-full" />
+        <Link
+          to="/"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+          }}
+        >
+          <DoorDashLogo className="logo" />
+          <DoorDashLogoFull className="logo-full" />
+        </Link>
 
         <div className="order-type__container">
           <Button className="primary">Delivery</Button>
-          <Button className="ghost">Pickup</Button>
+          <Button className="ghost" onClick={() => navigate('/pickup')}>
+            Pickup
+          </Button>
         </div>
 
         <AddressSelection className="address-selection" />
@@ -89,10 +101,10 @@ export const Header = ({ className }) => {
       />
 
       <MenuSidebar visible={showSideMenu} onClose={toggleSideMenu}>
-        <MenuSidebarItem href="#" label="Home" icon={HomeIcon} />
-        <MenuSidebarItem href="#" label="Pickup" icon={BagIcon} />
-        <MenuSidebarItem href="offers" label="Offers" icon={TagIcon} />
-        <MenuSidebarItem href="#" label="Home" icon={HelpIcon} />
+        <MenuSidebarItem to="/" label="Home" icon={HomeIcon} />
+        <MenuSidebarItem to="/pickup" label="Pickup" icon={BagIcon} />
+        <MenuSidebarItem  label="Offers" icon={TagIcon} />
+        <MenuSidebarItem  label="Home" icon={HelpIcon} />
         <MenuSidebarItem
           onClick={toggleAuthModal}
           label="Sign Up or Sign In"
